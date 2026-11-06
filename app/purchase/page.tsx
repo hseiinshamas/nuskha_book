@@ -1,10 +1,10 @@
-import Image from "next/image";
+
 export default function PurchasePage() {
 
   const phoneNumber = "393520114267";
 
   const message = encodeURIComponent(
-    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض الإطلاق الخاص لأول 50 قارئاً. السعر الحالي هو 4.50€ أو 4.50$ بحسب العملة المناسبة لي. أرجو إرسال تفاصيل الدفع. أفضل الدفع عبر: Revolut / Whish."
+    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض الإطلاق الخاص لأول 50 قارئاً. السعر الحالي هو 4.50€ أو 4.50$ بحسب العملة المناسبة لي. أرجو إرسال تفاصيل الدفع. أفضل الدفع عبر: التحويل المصرفي (IBAN) / Whish."
   );
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -30,28 +30,10 @@ export default function PurchasePage() {
       <section className="relative px-6 pb-20 pt-12 md:pt-20">
         <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#E9E5FF]/70 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
-
-          {/* Book cover */}
-<div className="flex justify-center">
-  <div className="relative w-[250px] sm:w-[290px]">
-    <div className="absolute -inset-6 rounded-full bg-[#8275D8]/10 blur-3xl" />
-
-    <div className="relative overflow-hidden rounded-[5px] shadow-[0_30px_70px_rgba(38,37,66,0.22)]">
-      <Image
-        src="/images/bookCover.png"
-        alt="غلاف كتاب نسخة لم تُكتب بعد"
-        width={800}
-        height={1100}
-        priority
-        className="h-auto w-full object-contain"
-      />
-    </div>
-  </div>
-</div>
+        <div className="relative mx-auto max-w-3xl">
 
           {/* Purchase information */}
-          <div className="text-center md:text-right">
+          <div className="text-center">
 
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E4E1F3] bg-white px-4 py-2 text-xs font-medium text-[#8275D8]">
               <span className="h-2 w-2 rounded-full bg-[#8275D8]" />
@@ -120,7 +102,9 @@ export default function PurchasePage() {
             <p className="mt-5 text-xs leading-7 text-[#9293A0]">
               تواصل معنا لاختيار وسيلة الدفع المناسبة.
               <br />
-              تفاصيل الدفع عبر Whish للعملاء في لبنان تُرسل بشكل خاص.
+              يتوفر التحويل المصرفي عبر IBAN، كما تتوفر خدمة Whish للعملاء في لبنان.
+              <br />
+              تفاصيل الدفع تُرسل بشكل خاص عبر WhatsApp.
             </p>
 
           </div>
@@ -155,7 +139,7 @@ export default function PurchasePage() {
               <p className="text-3xl font-extrabold text-[#8275D8]">02</p>
               <h3 className="mt-4 font-bold">اختر وسيلة الدفع</h3>
               <p className="mt-3 text-sm leading-8 text-[#858594]">
-                سنرسل لك تفاصيل الدفع عبر Revolut أو Whish بحسب اختيارك.
+                سنرسل لك تفاصيل التحويل المصرفي عبر IBAN أو الدفع عبر Whish بحسب اختيارك.
               </p>
             </div>
 
