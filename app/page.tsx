@@ -1,4 +1,3 @@
-
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F8F8FA] text-[#20212B]">
@@ -11,7 +10,7 @@ export default function Home() {
 
         <a
           href="/purchase"
-          className="rounded-full bg-[#242536] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8275D8]"
+          className="rounded-full bg-[#242536] px-6 py-3 text-sm font-semibold !text-white transition hover:bg-[#8275D8]"
         >
           احصل على الكتاب
         </a>
@@ -87,7 +86,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
               <a
                 href="/purchase"
-                className="inline-flex w-full items-center justify-center rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold !text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
               >
                 احصل على نسختك الآن ←
               </a>
@@ -154,6 +153,96 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Book preview - NEW SECTION */}
+      <section className="border-t border-[#ECEBF1] bg-[#F8F8FA] px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-5xl">
+
+          <div className="mb-14 text-center">
+            <p className="mb-4 text-sm font-semibold text-[#8275D8]">
+              داخل صفحات الكتاب
+            </p>
+
+            <h2 className="text-2xl font-extrabold leading-relaxed md:text-3xl">
+              ألقِ نظرة داخل الكتاب
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-[#777887]">
+              بعض الأفكار التي ستجدها بين صفحات «نسخة لم تُكتب بعد».
+              هذه مجرد بداية لما قد تكتشفه خلال رحلتك مع الكتاب.
+            </p>
+          </div>
+
+          <div className="grid items-stretch gap-8 md:grid-cols-2">
+
+            {/* Introduction excerpt */}
+            <article className="flex flex-col rounded-2xl border border-[#E9E6F2] bg-white p-7 shadow-[0_10px_35px_rgba(38,37,66,0.04)] md:p-9">
+
+              <div className="mb-7 flex items-center justify-between">
+                <span className="text-xs font-semibold text-[#8275D8]">
+                  من المقدمة
+                </span>
+
+                <span className="text-xs text-[#B0AFC0]">
+                  01
+                </span>
+              </div>
+
+              <div className="mb-6 h-1 w-10 rounded-full bg-[#B5A9FF]" />
+
+              <h3 className="mb-6 text-xl font-bold leading-relaxed text-[#292A40]">
+                البداية الحقيقية
+              </h3>
+
+              <p className="flex-1 text-sm leading-9 text-[#666777]">
+                ولعل البداية الحقيقية لا تكون في أن نعرف تماماً من نريد أن نصبح، بل في أن نمتلك الشجاعة لنسأل أنفسنا، بصدق، من نكون الآن، وكيف وصلنا إلى هنا، وأي جزء من حياتنا نريد أن نختاره بأنفسنا.
+              </p>
+
+              <div className="mt-8 border-t border-[#ECEBF1] pt-5">
+                <p className="text-xs text-[#9293A0]">
+                  نسخة لم تُكتب بعد · حسين شمص
+                </p>
+              </div>
+            </article>
+
+            {/* Chapter excerpt */}
+            <article className="flex flex-col rounded-2xl border border-[#E9E6F2] bg-white p-7 shadow-[0_10px_35px_rgba(38,37,66,0.04)] md:p-9">
+
+              <div className="mb-7 flex items-center justify-between">
+                <span className="text-xs font-semibold text-[#8275D8]">
+                  مقتطف من أحد الفصول
+                </span>
+
+                <span className="text-xs text-[#B0AFC0]">
+                  02
+                </span>
+              </div>
+
+              <div className="mb-6 h-1 w-10 rounded-full bg-[#B5A9FF]" />
+
+              <h3 className="mb-6 text-xl font-bold leading-relaxed text-[#292A40]">
+                حقك في الاختيار
+              </h3>
+
+              <p className="flex-1 text-sm leading-9 text-[#666777]">
+                قد لا يتفق الجميع مع الطريق الذي تختاره، وقد لا يفهم بعضهم الأسباب التي تدفعك إليه. وهذا لا يعني بالضرورة أنك على حق، لكنه يعني أن اختلافهم معك لا يسلبك حقك في التفكير والاختيار وتحمل مسؤولية قراراتك. فالإنسان لا يصبح مستقلاً عندما لا يعود يسمع آراء الآخرين، بل عندما يستطيع سماعها دون أن يتنازل عن حقه في تكوين رأيه الخاص.
+              </p>
+
+              <div className="mt-8 border-t border-[#ECEBF1] pt-5">
+                <p className="text-xs text-[#9293A0]">
+                  نسخة لم تُكتب بعد · حسين شمص
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <p className="mt-8 text-center text-xs text-[#A0A0AE]">
+            مقتطفات من النسخة الرقمية للكتاب · PDF
+          </p>
+
+        </div>
+      </section>
+
       {/* Final purchase */}
       <section className="px-6 py-16 md:py-20">
         <div className="mx-auto max-w-4xl rounded-[28px] bg-gradient-to-br from-[#292A40] to-[#444064] px-7 py-12 text-center text-white md:px-14">
@@ -165,9 +254,21 @@ export default function Home() {
             ابدأ رحلتك مع «نسخة لم تُكتب بعد».
           </p>
 
+          <p className="mt-5 text-sm leading-8 text-white/75">
+            عرض الإطلاق لأول 50 عملية شراء مؤكدة:
+            <span className="mx-2 font-extrabold text-white">
+              4.50€ أو 4.50$
+            </span>
+            بدلاً من
+            <span className="mx-2 text-white/50 line-through">
+              7€ أو 7$
+            </span>
+            . بعد اكتمال أول 50 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
+          </p>
+
           <a
             href="/purchase"
-            className="mt-7 inline-flex rounded-full bg-white px-9 py-4 text-sm font-bold text-[#292A40] transition hover:-translate-y-1 hover:bg-[#EDE9FC]"
+            className="mt-7 inline-flex rounded-full bg-white px-9 py-4 text-sm font-bold !text-[#292A40] transition hover:-translate-y-1 hover:bg-[#EDE9FC]"
           >
             احصل على الكتاب
           </a>
@@ -192,4 +293,3 @@ export default function Home() {
     </main>
   );
 }
-  
