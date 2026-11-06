@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F8F8FA] text-[#20212B]">
@@ -23,38 +24,22 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
 
           {/* Book cover */}
-          <div className="flex justify-center">
-            <div className="relative w-[250px] sm:w-[290px]">
-              <div className="absolute -inset-6 rounded-full bg-[#8275D8]/10 blur-3xl" />
+<div className="flex justify-center">
+  <div className="relative w-[250px] sm:w-[290px]">
+    <div className="absolute -inset-6 rounded-full bg-[#8275D8]/10 blur-3xl" />
 
-              <div className="relative flex aspect-[3/4] flex-col justify-between overflow-hidden rounded-[5px] bg-gradient-to-br from-[#25263B] via-[#34334F] to-[#514B76] p-7 text-center text-white shadow-[0_30px_70px_rgba(38,37,66,0.22)]">
-
-                <div className="absolute -left-16 top-24 h-56 w-56 rounded-full border border-white/10" />
-                <div className="absolute -left-8 top-32 h-40 w-40 rounded-full border border-white/10" />
-
-                <div className="relative z-10 pt-3">
-                  <p className="text-3xl font-bold leading-relaxed">
-                    نسخة لم تُكتب بعد
-                  </p>
-                  <div className="mx-auto my-5 h-1 w-10 rounded-full bg-[#B5A9FF]" />
-                  <p className="text-xs leading-7 text-white/65">
-                    رحلة في مواجهة الذات وتحرير العقل وإعادة اكتشاف الحياة
-                  </p>
-                </div>
-
-                <div className="relative flex flex-1 items-center justify-center">
-                  <div className="absolute h-36 w-36 rotate-45 rounded-[35px] border border-white/20" />
-                  <div className="absolute h-24 w-24 -rotate-12 rounded-[28px] border border-[#B5A9FF]/60" />
-                  <div className="h-12 w-12 rotate-45 rounded-xl bg-gradient-to-br from-[#B5A9FF] to-[#7264BB] shadow-[0_0_45px_rgba(181,169,255,0.4)]" />
-                </div>
-
-                <p className="relative z-10 text-sm tracking-wide text-white/80">
-                  حسين شمص
-                </p>
-              </div>
-            </div>
-          </div>
-
+    <div className="relative overflow-hidden rounded-[5px] shadow-[0_30px_70px_rgba(38,37,66,0.22)]">
+      <Image
+        src="/images/bookCover.png"
+        alt="غلاف كتاب نسخة لم تُكتب بعد"
+        width={800}
+        height={1100}
+        priority
+        className="h-auto w-full object-contain"
+      />
+    </div>
+  </div>
+</div>
           {/* Book introduction */}
           <div className="text-center md:text-right">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E4E1F3] bg-white px-4 py-2 text-xs font-medium text-[#8275D8]">
