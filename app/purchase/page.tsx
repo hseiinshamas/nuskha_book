@@ -1,4 +1,3 @@
-
 export default function PurchasePage() {
 
   const phoneNumber = "393520114267";
@@ -51,6 +50,28 @@ export default function PurchasePage() {
               مساحة للتفكير، ومراجعة ما اعتدت تصديقه، واكتشاف
               ما تريد أن تكونه بعيداً عن النسخ التي رسمها الآخرون لك.
             </p>
+
+            {/* Amazon Kindle option */}
+            <div className="mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-center shadow-sm">
+              <p className="text-sm font-bold text-[#292A40]">
+                متاح قريباً أيضاً على Amazon Kindle
+              </p>
+
+              <p className="mt-2 text-sm leading-8 text-[#777887]">
+  اشترِ الكتاب رقمياً عبر Amazon واقرأه باستخدام تطبيق Kindle أو جهاز Kindle.
+  يختلف السعر عن الشراء المباشر بسبب الرسوم والعمولات التي تفرضها Amazon على مبيعات الكتب.
+</p>
+
+              <div className="mt-4">
+                <span className="text-3xl font-extrabold text-[#8275D8]">
+                  $6.99
+                </span>
+              </div>
+
+              <div className="mt-4 inline-flex items-center rounded-full bg-[#F1EFFA] px-6 py-3 text-sm font-semibold text-[#8275D8]">
+                قريباً على Amazon Kindle
+              </div>
+            </div>
 
             <div className="my-9 h-px bg-[#E9E7F0]" />
 
