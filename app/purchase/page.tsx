@@ -1,9 +1,10 @@
+
 export default function PurchasePage() {
 
   const phoneNumber = "393520114267";
 
   const message = encodeURIComponent(
-    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض الإطلاق الخاص لأول 50 قارئاً. السعر الحالي هو 4.50€ أو 4.50$ بحسب العملة المناسبة لي. أرجو إرسال تفاصيل الدفع. أفضل الدفع عبر: التحويل المصرفي (IBAN) / Whish."
+    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض الإطلاق الخاص لأول 150 قارئاً. السعر الحالي هو 4.50€ أو 4.50$ بحسب العملة المناسبة لي. أرجو إرسال تفاصيل الدفع. أفضل الدفع عبر: التحويل المصرفي (IBAN) / Whish."
   );
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -58,9 +59,9 @@ export default function PurchasePage() {
               </p>
 
               <p className="mt-2 text-sm leading-8 text-[#777887]">
-  اشترِ الكتاب رقمياً عبر Amazon واقرأه باستخدام تطبيق Kindle أو جهاز Kindle.
-  يختلف السعر عن الشراء المباشر بسبب الرسوم والعمولات التي تفرضها Amazon على مبيعات الكتب.
-</p>
+                اشترِ الكتاب رقمياً عبر Amazon واقرأه باستخدام تطبيق Kindle أو جهاز Kindle.
+                يختلف السعر عن الشراء المباشر بسبب الرسوم والعمولات التي تفرضها Amazon على مبيعات الكتب.
+              </p>
 
               <div className="mt-4">
                 <span className="text-3xl font-extrabold text-[#8275D8]">
@@ -82,7 +83,7 @@ export default function PurchasePage() {
               </p>
 
               <p className="mt-2 text-sm leading-8 text-[#666777]">
-                لأول 50 قارئاً، احصل على الكتاب بسعر خاص قبل الانتقال إلى السعر العادي.
+                لأول 150 قارئاً، احصل على الكتاب بسعر خاص قبل الانتقال إلى السعر العادي.
               </p>
 
               <div className="mt-5 grid grid-cols-2 gap-4">
@@ -104,7 +105,7 @@ export default function PurchasePage() {
               </div>
 
               <p className="mt-4 text-xs leading-7 text-[#9293A0]">
-                بعد اكتمال أول 50 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
+                بعد اكتمال أول 150 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
               </p>
             </div>
 

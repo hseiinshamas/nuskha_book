@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F8F8FA] text-[#20212B]">
@@ -24,22 +26,23 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
 
           {/* Book cover */}
-<div className="flex justify-center">
-  <div className="relative w-[250px] sm:w-[290px]">
-    <div className="absolute -inset-6 rounded-full bg-[#8275D8]/10 blur-3xl" />
+          <div className="flex justify-center">
+            <div className="relative w-[250px] sm:w-[290px]">
+              <div className="absolute -inset-6 rounded-full bg-[#8275D8]/10 blur-3xl" />
 
-    <div className="relative overflow-hidden rounded-[5px] shadow-[0_30px_70px_rgba(38,37,66,0.22)]">
-      <Image
-        src="/images/bookCover.png"
-        alt="غلاف كتاب نسخة لم تُكتب بعد"
-        width={800}
-        height={1100}
-        priority
-        className="h-auto w-full object-contain"
-      />
-    </div>
-  </div>
-</div>
+              <div className="relative overflow-hidden rounded-[5px] shadow-[0_30px_70px_rgba(38,37,66,0.22)]">
+                <Image
+                  src="/images/bookCover.png"
+                  alt="غلاف كتاب نسخة لم تُكتب بعد"
+                  width={800}
+                  height={1100}
+                  priority
+                  className="h-auto w-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Book introduction */}
           <div className="text-center md:text-right">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E4E1F3] bg-white px-4 py-2 text-xs font-medium text-[#8275D8]">
@@ -138,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Book preview - NEW SECTION */}
+      {/* Book preview */}
       <section className="border-t border-[#ECEBF1] bg-[#F8F8FA] px-6 py-20 md:py-24">
         <div className="mx-auto max-w-5xl">
 
@@ -240,7 +243,7 @@ export default function Home() {
           </p>
 
           <p className="mt-5 text-sm leading-8 text-white/75">
-            عرض الإطلاق لأول 50 عملية شراء مؤكدة:
+            عرض الإطلاق لأول 150 عملية شراء مؤكدة:
             <span className="mx-2 font-extrabold text-white">
               4.50€ أو 4.50$
             </span>
@@ -248,7 +251,7 @@ export default function Home() {
             <span className="mx-2 text-white/50 line-through">
               7€ أو 7$
             </span>
-            . بعد اكتمال أول 50 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
+            . بعد اكتمال أول 150 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
           </p>
 
           <a
