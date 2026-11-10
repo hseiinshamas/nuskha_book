@@ -1,6 +1,5 @@
 
 export default function PurchasePage() {
-
   const phoneNumber = "393520114267";
 
   const message = encodeURIComponent(
@@ -30,7 +29,7 @@ export default function PurchasePage() {
       <section className="relative px-6 pb-20 pt-12 md:pt-20">
         <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#E9E5FF]/70 blur-3xl" />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-3xl">
 
           {/* Purchase information */}
           <div className="text-center">
@@ -53,24 +52,32 @@ export default function PurchasePage() {
             </p>
 
             {/* Amazon Kindle option */}
-            <div className="mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-center shadow-sm">
+            <div className="relative z-20 mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-center shadow-sm">
               <p className="text-sm font-bold text-[#292A40]">
-                متاح قريباً أيضاً على Amazon Kindle
+                اقرأ الكتاب على Amazon Kindle
               </p>
 
               <p className="mt-2 text-sm leading-8 text-[#777887]">
-                اشترِ الكتاب رقمياً عبر Amazon واقرأه باستخدام تطبيق Kindle أو جهاز Kindle.
-                يختلف السعر عن الشراء المباشر بسبب الرسوم والعمولات التي تفرضها Amazon على مبيعات الكتب.
+                يمكنك الآن اقتناء النسخة الرقمية وقراءتها عبر تطبيق Kindle أو جهاز Kindle.
               </p>
 
-              <div className="mt-4">
-                <span className="text-3xl font-extrabold text-[#8275D8]">
-                  $6.99
-                </span>
-              </div>
-
-              <div className="mt-4 inline-flex items-center rounded-full bg-[#F1EFFA] px-6 py-3 text-sm font-semibold text-[#8275D8]">
-                قريباً على Amazon Kindle
+              <div className="relative z-30 mt-5">
+                <a
+                 href="https://link.amazon/B06RaYQgp" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: "#8275D8",
+                    color: "#FFFFFF",
+                    textDecoration: "none",
+                  }}
+                  className="relative z-30 inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold !text-white shadow-md transition hover:-translate-y-1 hover:!bg-[#7062C7] hover:!text-white"
+                >
+                  <span style={{ color: "#FFFFFF" }}>
+                    اشترِ نسختك عبر Amazon Kindle
+                  </span>
+                  <span style={{ color: "#FFFFFF" }}>↗</span>
+                </a>
               </div>
             </div>
 
@@ -114,11 +121,11 @@ export default function PurchasePage() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
+              className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold !text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
             >
-              <span className="text-lg">◉</span>
+              <span className="text-lg !text-white">◉</span>
               اطلب نسختك عبر WhatsApp
-              <span>↗</span>
+              <span className="!text-white">↗</span>
             </a>
 
             <p className="mt-5 text-xs leading-7 text-[#9293A0]">
