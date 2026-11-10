@@ -51,46 +51,15 @@ export default function PurchasePage() {
               ما تريد أن تكونه بعيداً عن النسخ التي رسمها الآخرون لك.
             </p>
 
-            {/* Amazon Kindle option */}
-            <div className="relative z-20 mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-center shadow-sm">
-              <p className="text-sm font-bold text-[#292A40]">
-                اقرأ الكتاب على Amazon Kindle
-              </p>
+            {/* WhatsApp purchase option */}
+            <div className="mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-5 text-right">
 
-              <p className="mt-2 text-sm leading-8 text-[#777887]">
-                يمكنك الآن اقتناء النسخة الرقمية وقراءتها عبر تطبيق Kindle أو جهاز Kindle.
-              </p>
-
-              <div className="relative z-30 mt-5">
-                <a
-                 href="https://link.amazon/B06RaYQgp" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    backgroundColor: "#8275D8",
-                    color: "#FFFFFF",
-                    textDecoration: "none",
-                  }}
-                  className="relative z-30 inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold !text-white shadow-md transition hover:-translate-y-1 hover:!bg-[#7062C7] hover:!text-white"
-                >
-                  <span style={{ color: "#FFFFFF" }}>
-                    اشترِ نسختك عبر Amazon Kindle
-                  </span>
-                  <span style={{ color: "#FFFFFF" }}>↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="my-9 h-px bg-[#E9E7F0]" />
-
-            {/* Launch offer */}
-            <div className="rounded-2xl border border-[#E4E1F3] bg-white p-5 text-right">
               <p className="text-sm font-bold text-[#8275D8]">
-                عرض الإطلاق الخاص
+                الخيار الأول · الشراء المباشر
               </p>
 
               <p className="mt-2 text-sm leading-8 text-[#666777]">
-                لأول 150 قارئاً، احصل على الكتاب بسعر خاص قبل الانتقال إلى السعر العادي.
+                اقتنِ نسختك مباشرةً عبر WhatsApp واستفد من عرض الإطلاق الخاص لأول 150 قارئاً.
               </p>
 
               <div className="mt-5 grid grid-cols-2 gap-4">
@@ -114,27 +83,65 @@ export default function PurchasePage() {
               <p className="mt-4 text-xs leading-7 text-[#9293A0]">
                 بعد اكتمال أول 150 عملية شراء مؤكدة، يصبح السعر 7€ أو 7$.
               </p>
+
+              <div className="mt-6 text-center">
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold !text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
+                >
+                  <span className="text-lg !text-white">◉</span>
+                  اطلب نسختك عبر WhatsApp
+                  <span className="!text-white">↗</span>
+                </a>
+              </div>
+
+              <p className="mt-5 text-center text-xs leading-7 text-[#9293A0]">
+                يتوفر التحويل المصرفي عبر IBAN، كما تتوفر خدمة Whish للعملاء في لبنان.
+                <br />
+                تفاصيل الدفع تُرسل بشكل خاص عبر WhatsApp.
+              </p>
             </div>
 
-            {/* WhatsApp button */}
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold !text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
-            >
-              <span className="text-lg !text-white">◉</span>
-              اطلب نسختك عبر WhatsApp
-              <span className="!text-white">↗</span>
-            </a>
+            {/* Alternative purchase option */}
+            <div className="my-8 flex items-center gap-4">
+              <div className="h-px flex-1 bg-[#E9E7F0]" />
+              <span className="text-sm font-semibold text-[#9293A0]">
+                أو
+              </span>
+              <div className="h-px flex-1 bg-[#E9E7F0]" />
+            </div>
 
-            <p className="mt-5 text-xs leading-7 text-[#9293A0]">
-              تواصل معنا لاختيار وسيلة الدفع المناسبة.
-              <br />
-              يتوفر التحويل المصرفي عبر IBAN، كما تتوفر خدمة Whish للعملاء في لبنان.
-              <br />
-              تفاصيل الدفع تُرسل بشكل خاص عبر WhatsApp.
-            </p>
+            <div className="rounded-2xl border border-[#E4E1F3] bg-white p-6 text-center shadow-sm">
+
+              <p className="text-sm font-bold text-[#292A40]">
+                الخيار الثاني · Amazon Kindle
+              </p>
+
+              <p className="mt-2 text-sm leading-8 text-[#777887]">
+                أو يمكنك اقتناء الكتاب مباشرةً عبر Amazon Kindle وقراءته من خلال تطبيق Kindle أو جهاز Kindle.
+              </p>
+
+              <div className="relative z-30 mt-5">
+                <a
+                  href="https://link.amazon/B06HHWHk7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: "#8275D8",
+                    color: "#FFFFFF",
+                    textDecoration: "none",
+                  }}
+                  className="relative z-30 inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold !text-white shadow-md transition hover:-translate-y-1 hover:!bg-[#7062C7] hover:!text-white"
+                >
+                  <span style={{ color: "#FFFFFF" }}>
+                    اشترِ نسختك عبر Amazon Kindle
+                  </span>
+                  <span style={{ color: "#FFFFFF" }}>↗</span>
+                </a>
+              </div>
+            </div>
 
           </div>
         </div>
