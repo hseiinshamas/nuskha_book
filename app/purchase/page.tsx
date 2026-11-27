@@ -3,7 +3,7 @@ export default function PurchasePage() {
   const phoneNumber = "393520114267";
 
   const message = encodeURIComponent(
-    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض عيد الميلاد الخاص بسعر 3.50$ فقط.\n\nلتسهيل عملية الشراء، يرجى الاطلاع على معلوماتي التالية:\n\nالاسم الكامل:\nالبريد الإلكتروني لاستلام الكتاب:\nطريقة الدفع المفضلة:\n- تحويل مصرفي عبر IBAN\n- Whish (للمقيمين في لبنان)\n\nأرجو إرسال تفاصيل الدفع المناسبة. شكراً لكم!"
+    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض الجمعة البيضاء بسعر 2.99$ فقط بدلاً من 4.50$.\n\nلتسهيل عملية الشراء، يرجى الاطلاع على معلوماتي التالية:\n\nالاسم الكامل:\nالبريد الإلكتروني لاستلام الكتاب:\nطريقة الدفع المفضلة:\n- تحويل مصرفي عبر IBAN\n- Whish (للمقيمين في لبنان)\n\nأرجو إرسال تفاصيل الدفع المناسبة. شكراً لكم!"
   );
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -51,8 +51,8 @@ export default function PurchasePage() {
               ما تريد أن تكونه بعيداً عن النسخ التي رسمها الآخرون لك.
             </p>
 
-            {/* Birthday offer */}
-            <div className="relative mt-10 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#292A40] via-[#393653] to-[#6656A2] p-7 text-center text-white shadow-xl shadow-[#393653]/20 md:p-10">
+            {/* Black Friday offer */}
+            <div className="relative mt-10 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#20212B] via-[#393653] to-[#6656A2] p-7 text-center text-white shadow-xl shadow-[#393653]/20 md:p-10">
 
               <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full border border-white/10" />
               <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full border border-white/10" />
@@ -60,34 +60,45 @@ export default function PurchasePage() {
               <div className="relative">
 
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold tracking-wide text-white">
-                  🎂 عرض خاص بمناسبة عيد ميلادي
+                  🖤 BLACK FRIDAY · الجمعة البيضاء
                 </div>
 
                 <h2 className="mt-6 text-2xl font-extrabold leading-relaxed md:text-3xl">
-                  هديتي لكم في عيد ميلادي!
+                  فرصة الجمعة البيضاء!
                 </h2>
 
                 <p className="mt-3 text-sm leading-8 text-white/75">
-                  بمناسبة عيد ميلادي، قررت أن أشارككم كتابي بسعر رمزي،
-                  وأمنح المزيد منكم فرصة لقراءته.
+                  بمناسبة Black Friday، أصبح بإمكانك اقتناء كتاب
+                  «نسخة لم تُكتب بعد» بسعر خاص لفترة محدودة.
                 </p>
 
                 <div className="mx-auto mt-7 max-w-xs rounded-2xl border border-white/15 bg-white/10 p-6">
+
                   <p className="text-xs text-white/65">
-                    سعر الكتاب الخاص
+                    سعر الجمعة البيضاء
                   </p>
 
-                  <p className="mt-2 text-5xl font-black text-white">
-                    $3.50
-                  </p>
+                  <div className="mt-3 flex items-center justify-center gap-3">
+                    <span className="text-5xl font-black text-white">
+                      $2.99
+                    </span>
+
+                    <span className="text-lg text-white/50 line-through">
+                      $4.50
+                    </span>
+                  </div>
 
                   <p className="mt-3 text-xs text-white/65">
                     السعر بالدولار الأمريكي
                   </p>
                 </div>
 
-                <p className="mt-6 text-sm leading-8 text-white/75">
-                  فرصة لاقتناء «نسخة لم تُكتب بعد» وبدء رحلة مختلفة مع نفسك.
+                <div className="mt-7 inline-flex rounded-full bg-white px-5 py-2 text-xs font-extrabold text-[#393653]">
+                  العرض متاح اليوم فقط · 27 نوفمبر
+                </div>
+
+                <p className="mt-5 text-sm leading-8 text-white/75">
+                  لا تفوّت فرصة اقتناء الكتاب وبدء رحلة مختلفة مع نفسك.
                 </p>
 
               </div>
@@ -110,12 +121,20 @@ export default function PurchasePage() {
               </p>
 
               <div className="mt-6 rounded-xl bg-[#F8F8FA] p-5 text-center">
+
                 <p className="text-xs text-[#9293A0]">
-                  سعر عرض عيد الميلاد
+                  سعر عرض الجمعة البيضاء
                 </p>
-                <p className="mt-2 text-3xl font-extrabold text-[#8275D8]">
-                  $3.50
-                </p>
+
+                <div className="mt-2 flex items-center justify-center gap-3">
+                  <p className="text-3xl font-extrabold text-[#8275D8]">
+                    $2.99
+                  </p>
+
+                  <span className="text-sm text-[#9293A0] line-through">
+                    $4.50
+                  </span>
+                </div>
               </div>
 
               <div className="mt-6 text-center">
