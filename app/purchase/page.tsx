@@ -3,7 +3,7 @@ export default function PurchasePage() {
   const phoneNumber = "393520114267";
 
   const message = encodeURIComponent(
-    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد». السعر هو 4.50€ أو 4.50$ بحسب العملة المناسبة لي. أرجو إرسال تفاصيل الدفع. أفضل الدفع عبر: التحويل المصرفي (IBAN) / Whish."
+    "مرحباً، أرغب بشراء كتاب «نسخة لم تُكتب بعد» والاستفادة من عرض عيد الميلاد الخاص بسعر 3.50$ فقط.\n\nلتسهيل عملية الشراء، يرجى الاطلاع على معلوماتي التالية:\n\nالاسم الكامل:\nالبريد الإلكتروني لاستلام الكتاب:\nطريقة الدفع المفضلة:\n- تحويل مصرفي عبر IBAN\n- Whish (للمقيمين في لبنان)\n\nأرجو إرسال تفاصيل الدفع المناسبة. شكراً لكم!"
   );
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -51,8 +51,50 @@ export default function PurchasePage() {
               ما تريد أن تكونه بعيداً عن النسخ التي رسمها الآخرون لك.
             </p>
 
+            {/* Birthday offer */}
+            <div className="relative mt-10 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#292A40] via-[#393653] to-[#6656A2] p-7 text-center text-white shadow-xl shadow-[#393653]/20 md:p-10">
+
+              <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full border border-white/10" />
+              <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full border border-white/10" />
+
+              <div className="relative">
+
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold tracking-wide text-white">
+                  🎂 عرض خاص بمناسبة عيد ميلادي
+                </div>
+
+                <h2 className="mt-6 text-2xl font-extrabold leading-relaxed md:text-3xl">
+                  هديتي لكم في عيد ميلادي!
+                </h2>
+
+                <p className="mt-3 text-sm leading-8 text-white/75">
+                  بمناسبة عيد ميلادي، قررت أن أشارككم كتابي بسعر رمزي،
+                  وأمنح المزيد منكم فرصة لقراءته.
+                </p>
+
+                <div className="mx-auto mt-7 max-w-xs rounded-2xl border border-white/15 bg-white/10 p-6">
+                  <p className="text-xs text-white/65">
+                    سعر الكتاب الخاص
+                  </p>
+
+                  <p className="mt-2 text-5xl font-black text-white">
+                    $3.50
+                  </p>
+
+                  <p className="mt-3 text-xs text-white/65">
+                    السعر بالدولار الأمريكي
+                  </p>
+                </div>
+
+                <p className="mt-6 text-sm leading-8 text-white/75">
+                  فرصة لاقتناء «نسخة لم تُكتب بعد» وبدء رحلة مختلفة مع نفسك.
+                </p>
+
+              </div>
+            </div>
+
             {/* WhatsApp purchase option */}
-            <div className="mt-10 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-right shadow-sm">
+            <div className="mt-9 rounded-2xl border border-[#E4E1F3] bg-white p-6 text-right shadow-sm">
 
               <p className="text-sm font-bold text-[#8275D8]">
                 الخيار الأول · الشراء المباشر
@@ -63,30 +105,17 @@ export default function PurchasePage() {
               </h3>
 
               <p className="mt-2 text-sm leading-8 text-[#666777]">
-                أرسل رسالة عبر WhatsApp وسنرسل لك تفاصيل الدفع للحصول على نسختك الرقمية بصيغة PDF.
+                أرسل طلبك عبر WhatsApp، واملأ المعلومات المطلوبة
+                لتسهيل عملية الدفع وإرسال الكتاب إلى بريدك الإلكتروني.
               </p>
 
-              {/* Fixed prices */}
-              <div className="mt-6 grid grid-cols-2 gap-4">
-
-                <div className="rounded-xl bg-[#F8F8FA] p-4 text-center">
-                  <p className="text-xs text-[#9293A0]">
-                    السعر باليورو
-                  </p>
-                  <p className="mt-2 text-3xl font-extrabold text-[#8275D8]">
-                    €4.50
-                  </p>
-                </div>
-
-                <div className="rounded-xl bg-[#F8F8FA] p-4 text-center">
-                  <p className="text-xs text-[#9293A0]">
-                    السعر بالدولار
-                  </p>
-                  <p className="mt-2 text-3xl font-extrabold text-[#8275D8]">
-                    $4.50
-                  </p>
-                </div>
-
+              <div className="mt-6 rounded-xl bg-[#F8F8FA] p-5 text-center">
+                <p className="text-xs text-[#9293A0]">
+                  سعر عرض عيد الميلاد
+                </p>
+                <p className="mt-2 text-3xl font-extrabold text-[#8275D8]">
+                  $3.50
+                </p>
               </div>
 
               <div className="mt-6 text-center">
@@ -97,7 +126,7 @@ export default function PurchasePage() {
                   className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#8275D8] px-8 py-4 text-sm font-bold !text-white shadow-lg shadow-[#8275D8]/20 transition hover:-translate-y-1 hover:bg-[#7062C7] sm:w-auto"
                 >
                   <span className="text-lg !text-white">◉</span>
-                  اطلب نسختك الآن
+                  اطلب نسختك عبر WhatsApp
                   <span className="!text-white">↗</span>
                 </a>
               </div>
@@ -105,7 +134,8 @@ export default function PurchasePage() {
               <p className="mt-5 text-center text-xs leading-7 text-[#9293A0]">
                 يتوفر التحويل المصرفي عبر IBAN، كما تتوفر خدمة Whish للعملاء في لبنان.
                 <br />
-                تفاصيل الدفع تُرسل بشكل خاص عبر WhatsApp.
+                أرسل اسمك وبريدك الإلكتروني وطريقة الدفع المفضلة
+                عبر WhatsApp لإتمام طلبك.
               </p>
             </div>
 
